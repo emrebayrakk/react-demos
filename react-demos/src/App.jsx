@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import Navbar from "./components/Navbar"
+import PizzaList from "./components/PizzaList"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-    <h1>Hello React</h1>
-    </>
-  )
-}
-
-export default App
+export default function App() {
+    return (
+      <>
+      <Navbar />
+      <div className='container'>
+        <PizzaList />
+      </div>
+      
+      </>
+    )
+  }
