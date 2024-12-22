@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
 import PizzaList from "./components/PizzaList"
+import Footer from "./components/Footer"
 
 export default function App() {
     return (
@@ -7,6 +8,7 @@ export default function App() {
       <Navbar />
       <div className='container'>
         <PizzaList />
+        <Footer />
       </div>
       
       </>
