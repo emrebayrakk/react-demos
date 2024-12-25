@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <>
-      <h1>Todo App</h1>
-    </>
+    <header className="text-center mb-4">
+      <h1 className="text-primary">Todo App</h1>
+    </header>
   );
 }

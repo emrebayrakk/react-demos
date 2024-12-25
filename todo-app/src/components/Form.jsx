@@ -8,27 +8,28 @@ export default function Form({ onAddItem }) {
     event.preventDefault();
 
     const item = {
-      id: items.length + 1,
+      id: Date.now(),
       title: itemName,
       isDone: false,
     };
     onAddItem(item);
     setItemName("");
   }
-  function handleChange(event) {
-    setItemName(event.target.value);
-  }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Enter your task"
-        name="itemName"
-        value={itemName}
-        onChange={handleChange}
-      />
-      <button type="submit">Add</button>
+    <form className="mt-3" onSubmit={handleSubmit}>
+      <div className="input-group">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter your task"
+          value={itemName}
+          onChange={(e) => setItemName(e.target.value)}
+        />
+        <button className="btn btn-primary" type="submit">
+          Add
+        </button>
+      </div>
     </form>
   );
 }

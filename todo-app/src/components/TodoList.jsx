@@ -1,7 +1,8 @@
 import Todo from "./Todo";
+
 export default function TodoList({ items, onDeleteItem, updateItem }) {
   return (
-    <ul>
+    <ul className="list-group mt-4">
       {items.map((item) => (
         <Todo
           key={item.id}
