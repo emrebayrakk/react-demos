@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { items } from "../data.js";
-
-export default function Form({ onAddItem }) {
+import { useDispatch } from "react-redux";
+import { addTodo } from "../redux/feautures/todos/todosSlice";
+export default function Form() {
   const [itemName, setItemName] = useState("");
+
+  const dispatch = useDispatch();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,7 +14,8 @@ export default function Form({ onAddItem }) {
       title: itemName,
       isDone: false,
     };
-    onAddItem(item);
+
+    dispatch(addTodo(item));
     setItemName("");
   }
 
