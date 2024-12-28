@@ -6,8 +6,8 @@ import State from "./components/State.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <Events /> */}
-    <State />
+    {/* <State /> */}
   </StrictMode>
 );

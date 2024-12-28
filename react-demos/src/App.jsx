@@ -1,16 +1,15 @@
-import Navbar from "./components/Navbar"
-import PizzaList from "./components/PizzaList"
-import Footer from "./components/Footer"
+import Navbar from "./components/Navbar";
+import PizzaList from "./components/PizzaList";
+import Footer from "./components/Footer";
 
 export default function App() {
-    return (
-      <>
+  return (
+    <div className="d-flex flex-column min-vh-100">
       <Navbar />
-      <div className='container'>
+      <main className="flex-grow-1">
         <PizzaList />
-        <Footer />
-      </div>
-      
-      </>
-    )
-  }
+      </main>
+      <Footer />
+    </div>
+  );
+}
